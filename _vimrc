@@ -53,11 +53,21 @@ set backspace=indent,eol,start	" Fixes issues with delete/backspace
 " Easier exit from insert mode
 inoremap jk <esc>
 
+" Set leader to space
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
 " Make basic movements work better with wrapped lines
 nnoremap j gj
 nnoremap gj j
 nnoremap k gk
 nnoremap gk k
+
+" Basic movements in insert mode
+"inoremap <C-k> <C-o>gk
+"inoremap <C-h> <Left>
+"inoremap <C-l> <Right>
+"inoremap <C-j> <C-o>gj
 
 
 " Plugins
