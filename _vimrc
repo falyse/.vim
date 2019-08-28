@@ -33,6 +33,9 @@ set scrolloff=5          " always have at least 5 lines visible above/below curs
 set wildmenu                    " show Tab completion options above the command line
 set wildmode=list:longest,full  " only Tab complete to longest common string
 
+set directory^=$HOME/.vim/swap//  " Prevent swap files from being placed in current dir
+
+
 " Keep search results centered in the screen
 nnoremap n nzz
 nnoremap N Nzz
@@ -47,15 +50,39 @@ set backspace=indent,eol,start	" Fixes issues with delete/backspace
 
 " Custom Key Bindings
 
+" Easier exit from insert mode
 inoremap jk <esc>
+
+" Make basic movements work better with wrapped lines
+nnoremap j gj
+nnoremap gj j
+nnoremap k gk
+nnoremap gk k
 
 
 " Plugins
+"  Reload .vimrc and :PlugInstall to install new plugins
 
 call plug#begin('~/.vim/plugged')  " directory for plugins
 
+" Auto save files
 Plug '907th/vim-auto-save'
 let g:auto_save = 1  " enable AutoSave on Vim startup
+
+" Enable repeat on plugins 
+Plug 'tpope/vim-repeat'
+
+" Mappings to edit surroundings (parens, brackets, quotes, etc)
+Plug 'tpope/vim-surround'
+
+" Markdown extensions
+"Plug 'godlygeek/tabular'
+"Plug 'plasticboy/vim-markdown'
+
+" SystemVerilog
+Plug 'vhda/verilog_systemverilog.vim'
+"set foldmethod=syntax
+runtime macros/matchit.vim  " allow % to jump between begin/end pairs
 
 call plug#end()
 
