@@ -35,15 +35,6 @@ set wildmode=list:longest,full  " only Tab complete to longest common string
 
 set directory^=$HOME/.vim/swap//  " Prevent swap files from being placed in current dir
 
-
-" Keep search results centered in the screen
-nnoremap n nzz
-nnoremap N Nzz
-" Keep jump results centered in the screen
-nnoremap <C-o> <C-o>zz
-nnoremap <C-i> <C-i>zz
-
-
 set t_BE=			" Prevent copy/paste problems after exiting vim
 set backspace=indent,eol,start	" Fixes issues with delete/backspace
 
@@ -68,6 +59,16 @@ nnoremap gk k
 "inoremap <C-h> <Left>
 "inoremap <C-l> <Right>
 "inoremap <C-j> <C-o>gj
+
+" Keep search results centered in the screen
+nnoremap n nzz
+nnoremap N Nzz
+" Keep jump results centered in the screen
+nnoremap <C-o> <C-o>zz
+nnoremap <C-i> <C-i>zz
+
+" Clear last search pattern register by hitting return
+nnoremap <CR> :nohlsearch<CR>
 
 
 " Plugins
