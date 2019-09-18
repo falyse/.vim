@@ -73,6 +73,7 @@ nnoremap <CR> :nohlsearch<CR>
 
 " Plugins
 "  Reload .vimrc and :PlugInstall to install new plugins
+"  :PlugUpdate and :PlugClean to manage existing plugins
 
 call plug#begin('~/.vim/plugged')  " directory for plugins
 
@@ -94,6 +95,9 @@ Plug 'tpope/vim-surround'
 Plug 'vhda/verilog_systemverilog.vim'
 "set foldmethod=syntax
 runtime macros/matchit.vim  " allow % to jump between begin/end pairs
+
+" Log file syntax highlighting
+Plug 'falyse/vim-log-highlighting'
 
 call plug#end()
 
