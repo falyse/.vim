@@ -12,6 +12,7 @@ set incsearch           " search as characters are entered
 set ignorecase          " ignore case in search
 set smartcase           " ... except if a capital letter is included
 set hlsearch            " highlight search matches
+set nowrapscan          " don't wrap search back to the beginning of the file
 
 set showmatch           " highlight matching [{()}]
 
@@ -59,6 +60,9 @@ nnoremap gk k
 "inoremap <C-h> <Left>
 "inoremap <C-l> <Right>
 "inoremap <C-j> <C-o>gj
+"
+" Make Y yank till end of line
+nnoremap Y y$
 
 " Keep search results centered in the screen
 nnoremap n nzz
