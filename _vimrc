@@ -103,5 +103,12 @@ runtime macros/matchit.vim  " allow % to jump between begin/end pairs
 " Log file syntax highlighting
 Plug 'falyse/vim-log-highlighting'
 
+" Highlight multiple words with different colors
+Plug 'inkarkat/vim-ingo-library'
+Plug 'inkarkat/vim-mark'
+let g:mwDefaultHighlightingPalette = 'extended'
+nmap <Leader>M <Plug>MarkToggle
+nmap <Leader>N <Plug>MarkAllClear
+
 call plug#end()
 
