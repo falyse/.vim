@@ -3,6 +3,7 @@
 set t_Co=256            " set terminal to use 256 colors
 set background=light    " use light background for color scheme
 colorscheme PaperColor  " set color theme
+set linespace=2         " make sure linespacing is large enough to fully display underscores
 
 set number relativenumber   " show hybrid line numbers
 
@@ -73,6 +74,12 @@ nnoremap <C-i> <C-i>zz
 
 " Clear last search pattern register by hitting return
 nnoremap <CR> :nohlsearch<CR>
+
+" Use // to search for the visual mode selected text
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+
+" User <Leader>c to copy file path to clipboard
+:nnoremap <Leader>c :let @*=expand('%:p')<CR>
 
 
 " Plugins
